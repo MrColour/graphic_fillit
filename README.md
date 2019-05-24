@@ -37,3 +37,10 @@ Below is a example of the program:
 <br>
 <img height="250" src="https://github.com/MrColour/graphic_fillit/blob/master/resources/fillit_visualizer.gif" />
 <br>
+
+A flow chart of the project can be found in the [resources folder](https://github.com/MrColour/graphic_fillit/tree/master/resources)
+Below is partial flowchart.
+
+<img height="400" src="https://github.com/MrColour/graphic_fillit/blob/master/resources/pdf_picture.png" />
+
+For the code I actually submitted for fillit click [here](https://github.com/MrColour/fillit).
