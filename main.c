@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/22 18:33:15 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/23 15:40:00 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/23 19:54:51 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,35 +21,35 @@ int	main(int aa, char **args)
 	const char	*file;
 	t_tetrimino	tetriminos[MAX_TETRIMINO_PIECES];
 	int			board_size;
+	int			off_set;
 
+	off_set = 0;
 	if (aa >= 3)
 	{
-		if (ft_strcmp(args[1], "-slow") == 0)
+		if (ft_strcmp(args[2], "-slow") == 0)
 		{
-			aa = 2;
+			aa = aa - 1;
 			g_slow = 1;
-			args[1] = args[2];
+			off_set++;
 		}
-		else if (ft_strcmp(args[1], "-fast") == 0)
+		else if (ft_strcmp(args[2], "-fast") == 0)
 		{
-			aa = 2;
+			aa = aa - 1;
 			g_slow = 0;
-			args[1] = args[2];
+			off_set++;
 		}
 	}
-	if (aa >= 2)
+	if (aa >= 3)
 	{
-		if (ft_strcmp(args[2], "-yes") == 0)
+		if (ft_strcmp(args[2 + off_set], "-yes") == 0)
 		{
-			aa = 2;
+			aa = aa - 1;
 			g_optimization = 3;
-			args[1] = args[3];
 		}
-		else if (ft_strcmp(args[2], "-no") == 0)
+		else if (ft_strcmp(args[2 + off_set], "-no") == 0)
 		{
-			aa = 2;
+			aa = aa - 1;
 			g_optimization = 0;
-			args[1] = args[3];
 		}
 	}
 	if (aa != 2)
