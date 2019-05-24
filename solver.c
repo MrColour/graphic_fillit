@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/13 17:30:15 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/23 14:35:09 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/23 20:31:28 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ int		solve_board
 			while (++col + tetrimino[current_piece].width <= board_size)
 				if (((PIECE_MASK) & *(u_int64_t *)&board[row]) == 0 && g_counter++ > -1)
 				{
+					printf("Placed piece %c (%d, %d)\n", current_piece + 'A', row, col);
 					place_piece(&tetrimino[current_piece], board, &row, &col);
 					print_solution_of(tetrimino, board_size, current_piece);
 					if (board_is_solved(&current_piece, tetrimino, &row, &col))
