@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/12 18:55:45 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/23 15:20:56 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/23 21:07:25 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,8 +121,6 @@ void	print_solution_of(t_tetrimino *tetriminos, int board_size, int current_piec
 	// sleep(.5);
 	if (g_slow == 1)
 		nanosleep((const struct timespec[]){{0, 300000000L}}, NULL);
-	else
-		nanosleep((const struct timespec[]){{0, 7000000L}}, NULL);
 }
 
 void	final_print(t_tetrimino *tetriminos, int board_size, int current_piece)
