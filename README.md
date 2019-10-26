@@ -11,8 +11,8 @@ can use slow.
 
 ```
 -<speed>
-  ./fillit -slow <file>
-  ./fillit -fast <file>
+  ./fillit <file> -slow
+  ./fillit <file> -fast
 ```
 
 This will use an optimization that skips redundant checks (reduces search space). They are done by
@@ -21,8 +21,8 @@ have already checked the valid places before it.
 
 ```
 -<optimization>
-  ./fillit -yes <file>
-  ./fillit -no <file>
+  ./fillit <file> -yes
+  ./fillit <file> -no
 ```
   
 I have included a global counter that displays the amount of times a piece verification is attempted.
@@ -30,7 +30,7 @@ Using the optimization we can see the amount by which the optimization reduces t
 
 When using multiple commands please do:
 
-`./fillit -<speed> -<optimization> <file>`
+`./fillit <file> -<speed> -<optimization>`
 
 Below is a example of the program:
 
